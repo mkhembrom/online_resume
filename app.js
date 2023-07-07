@@ -1,3 +1,3 @@
 const handleClick = () => {
-    window.open('./Manjesh_Resume.pdf');
+    window.open('./online_resume/Manjesh_Resume.pdf');
 }
