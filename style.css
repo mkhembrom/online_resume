@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+/* ::-webkit-scrollbar {
+    display: none !important;
+} */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left,
+.right {
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.left {
+    display: grid;
+    place-items: center;
+
+}
+
+.shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #fff;
+    width: 100%;
+    animation: morph 6s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 240px;
+    transition: all 1s ease-in-out;
+    width: 240px;
+    z-index: 0;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+}
+
+.avatar {
+
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.profile {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    color: #000;
+    text-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+}
+
+.profile_name {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.right {
+    background-color: #fff;
+}
+
+body {
+    background: linear-gradient(318deg, #ff0062, #ffff00, #8f2dff, #00ffff, #0000ff);
+    background-size: 1000% 1000%;
+    height: 100vh;
+    width: 100%;
+
+    -webkit-animation: Coolgradient 41s linear infinite;
+    -moz-animation: Coolgradient 41s linear infinite;
+    -o-animation: Coolgradient 41s linear infinite;
+    animation: Coolgradient 41s linear infinite;
+}
+
+@-webkit-keyframes Coolgradient {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+@-moz-keyframes Coolgradient {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+@-o-keyframes Coolgradient {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+@keyframes Coolgradient {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+.right {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+
+    /* .scrollbar-hide::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+    } */
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 3rem 0;
+
+}
+
+.header {
+    width: 200px;
+    font-size: 14px;
+    color: #4E4FEB;
+    text-transform: uppercase;
+}
+
+.description {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.list {
+    margin-top: 10px;
+    padding-left: 1.4rem;
+}
+
+.bottom-section {
+    margin: 0.5rem 0 3.5rem 0;
+}
+
+.pdffile {
+    cursor: pointer;
+    padding: 1rem 4rem;
+    border: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.8px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #000;
+    /* background: linear-gradient(318deg, #ff0062, #ffff00, #00ff00, #00ffff, #0000ff);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: Coolgradient 41s linear infinite;
+    -moz-animation: Coolgradient 41s linear infinite;
+    -o-animation: Coolgradient 41s linear infinite;
+    animation: Coolgradient 41s linear infinite; */
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right {
+        overflow: hidden;
+        height: 100% !important;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .section {
+        flex-direction: column;
+        padding: 2rem 2rem 0;
+    }
+}
